@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import './ExpenseForm.css';
 
-const ExpenseForm = ()=>{
+const ExpenseForm = (props)=>{
     //use one state without multiple useState();
     const [usertitle, setusertitle] = useState('');
     const [userdate, setuserdate] = useState('');
     const [useramount, setuseramount] = useState('');
-
+    
     
     //titlehandler
     const titlehandler = (event)=>{
@@ -30,11 +30,12 @@ const ExpenseForm = ()=>{
             date : userdate,
             amount : useramount
         }
-        console.log(newExpense);
+        props.onsaveExpenseData(newExpense);
         //apply the two way binding;
         setuseramount(''); //userAmount is reset;
         setuserdate('');
         setusertitle('');
+        //we need to pass data to the parent 
 
     }
 

@@ -7,11 +7,9 @@ const ExpenseForm = (props)=>{
     const [userdate, setuserdate] = useState('');
     const [useramount, setuseramount] = useState('');
     
-    
     //titlehandler
     const titlehandler = (event)=>{
         setusertitle(event.target.value);
-        console.log(event.target.value)
     }
     //userdatehandler
     const userdatehandler = (event) =>{
@@ -30,8 +28,8 @@ const ExpenseForm = (props)=>{
             date : userdate,
             amount : useramount
         }
-        props.onsaveExpenseData(newExpense);
-        //apply the two way binding;
+        props.onsaveExpenseData(newExpense); //passing data to the newExpense data.
+        //Apply the two way binding;
         setuseramount(''); //userAmount is reset;
         setuserdate('');
         setusertitle('');

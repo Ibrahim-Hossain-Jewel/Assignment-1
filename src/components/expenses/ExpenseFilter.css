@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.expenses_filer{
+    display: flex;
+    justify-items: right;
+    justify-content: right;
+    color: white;
+}
+.expenses_filte__control label{
+    padding-right: 10px;
+}
+.expenses_filte__control select{
+    padding: 8px;
+}
